@@ -5,17 +5,9 @@ CAMINHO_ARQUIVO = 'dados.json'
 with open(CAMINHO_ARQUIVO, 'r', encoding='utf8') as arquivo:
     dados = json.load(arquivo)
 
-l1 = []
 l2 = []
 for i in dados:
-    l1.append(i['dia da semana'])
-for i in dados:
     l2.append(i['valor'])
-
-l3 = list(zip(l1, l2))
-    
-print(l3)
-print()
 
 menor_valor = min(l2)
 maior_valor = max(l2)
